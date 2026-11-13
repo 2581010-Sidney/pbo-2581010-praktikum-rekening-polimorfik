@@ -14,6 +14,22 @@ public class BankPolimorfik {
       }
 
       System.out.println();
-      System.out.println("========== ");
+      System.out.println("========== AKHIR BULAN ==========");
+      for (Rekening r : semua) {
+          System.out.println(String.format("%s biaya admin  : %s",r.getNomor(), Rekening.formatRupiah(r.potongBiayaAdmin())));
+      }
+      for (BerBunga b : berbunga) {
+          System.out.println(String.format("%s bunga        : %s", b.getNomor(), Rekening.formatRupiah(b.tambahBunga())));
+      }
+
+      System.out.println();
+      System.out.println("========== REKENING AKHIR ==========");
+      int total = 0;
+      for (Rekening r : semua){
+          r.cetakInfo();
+          total += r.getSaldo();
+      }
+      System.out.println("-------------------------------------");
+      System.out.println("Total dana bank : " + Rekening.formatRupiah(total));
     }
 }
