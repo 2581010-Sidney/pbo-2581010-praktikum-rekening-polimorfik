@@ -36,7 +36,9 @@ public abstract class Rekening {
         return true;
     }
 
-    public abstract int biayaAdminBulanan(); // semua subclass biasa wajub melakukan override
+    // menyembunyikan detail dan hanya menampilkan yang penting
+    // konsep/gagasan belum berbentuk. contohnya hewan, bentuk konkretnya anjing dan kucing
+    public abstract int biayaAdminBulanan(); // karna hanya kepala tanpa isi, semua subclass wajib override
 
     public int potongBiayaAdmin(){
         int biaya = biayaAdminBulanan(); // versi object sebenarnya
