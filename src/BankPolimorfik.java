@@ -1,15 +1,19 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class BankPolimorfik {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+      Tabungan ani = new Tabungan("101", "Ani", 1000000, 2.5);
+      Tabungan citra = new Tabungan("102", "Citra", 300000, 2.0);
+      Giro budi = new Giro("201", "Budi", 200000, 500000);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+      Rekening[] semua = {ani, citra, budi};
+      BerBunga[] berbunga = {ani, citra};
+
+      System.out.println("========== REKENING AWAL ==========");
+      for (Rekening r : semua) {
+          r.cetakInfo();
+      }
+
+      System.out.println();
+      System.out.println("========== ");
     }
 }

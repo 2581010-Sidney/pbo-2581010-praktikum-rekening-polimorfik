@@ -36,7 +36,7 @@ public abstract class Rekening {
         return true;
     }
 
-    public abstract int biayaAdminBulanan();
+    public abstract int biayaAdminBulanan(); // semua subclass biasa wajub melakukan override
 
     public int potongBiayaAdmin(){
         int biaya = biayaAdminBulanan(); // versi object sebenarnya
